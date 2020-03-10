@@ -3,6 +3,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+
+//importing function names located in another file, this is a shorthand version
+// of writing const handdleHomePage = require('./handlers').handleHomePage; <- this must be repeated 3 times 
+// in our example which is very long...
 const { handleHomePage, handleFormData, handle404 } = require('./handlers');
 
 const PORT = process.env.PORT || 8000;

@@ -47,7 +47,7 @@ _Examples of operations that might take time?_
 ## Callbacks
 
 What is a callback?
-
+-> a function to be called to execute an existing function;
 ---
 
 - A callback is a function that is to be executed, or _called_ after another function has finished executing.
@@ -62,11 +62,13 @@ console.log('do second thing');
 console.log('do third thing');
 
 // expected output
-
+do first thing
+do second thing
+do third thing
 ```
 
 _What is expected here?_
-
+JS executes the console.logs one at a time in order... 
 ---
 
 What happens if the second thing takes longer than expected?
@@ -80,6 +82,9 @@ setTimeout(function() {
 }, 2000);
 console.log('do third thing');
 ```
+do first thing
+do third thing
+do second thing
 
 ---
 

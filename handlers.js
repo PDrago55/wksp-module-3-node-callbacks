@@ -3,7 +3,8 @@ const items = [];
 const handleHomePage = (req, res) => {
     res.render('pages/homepage', { items: items })
 }
-
+// the method below is called destructuring
+// instead of writing const item = req.body.item;
 const handleFormData = (req, res) => {
     const { item } = req.body;
     items.push(item);
@@ -30,6 +31,8 @@ const handle404 = (req, res) => {
     res.type('txt').send('Not found');
 }
 
+
+// module exports is an object. 
 module.exports = {
     handleFormData,
     handleHomePage,
